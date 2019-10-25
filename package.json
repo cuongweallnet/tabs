@@ -46,8 +46,7 @@
   "dependencies": {
     "hoist-non-react-statics": "^3.3.0",
     "react-lifecycles-compat": "^3.0.4",
-    "react-native-safe-area-view": "^0.14.6",
-    "react-native-tab-view": "github:cuongweallnet/react-native-tab-view#master"
+    "react-native-safe-area-view": "^0.14.6"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.5.0",
@@ -77,7 +76,8 @@
     "react-navigation": "^4.0.7",
     "react-test-renderer": "16.5.0",
     "release-it": "^10.3.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "react-native-tab-view": "^2.10.0"
   },
   "peerDependencies": {
     "react": "*",
