@@ -43,13 +43,13 @@ type Props = NavigationViewProps &
 
 class MaterialTabView extends React.Component<Props> {
   title = '';
-  
   _renderLazyPlaceholder = (props: { route: Route }) => {
     const { lazyPlaceholderComponent: LazyPlaceholder } = this.props;
 
     if (LazyPlaceholder != null) {
       return <LazyPlaceholder {...props} />;
     }
+
     return null;
   };
 
