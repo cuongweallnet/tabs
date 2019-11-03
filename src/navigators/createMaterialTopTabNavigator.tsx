@@ -41,15 +41,24 @@ type Props = NavigationViewProps &
     screenProps?: unknown;
   };
 
-class MaterialTabView extends React.PureComponent<Props> {
+class MaterialTabView extends React.Component<Props> {
+  title = '';
+  
   _renderLazyPlaceholder = (props: { route: Route }) => {
     const { lazyPlaceholderComponent: LazyPlaceholder } = this.props;
 
     if (LazyPlaceholder != null) {
       return <LazyPlaceholder {...props} />;
     }
-
     return null;
+  };
+
+  shouldComponentUpdate(nextProps: any) {
+    if(this.title !== nextProps.title) {
+      this.title = nextProps.title;
+      return true;
+    }
+    return false;
   };
 
   _renderTabBar = (props: SceneRendererProps) => {
