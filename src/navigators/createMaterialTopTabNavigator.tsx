@@ -56,12 +56,12 @@ class MaterialTabView extends React.Component<Props> {
   componentDidMount = () => {
     setTimeout(() => {
       this.title = ''
-    }, 100)
+    }, 200)
   };
   
 
   shouldComponentUpdate(nextProps: any) {
-    if(this.title === null) {
+    if(this.title === undefined) {
       return true
     } else if(this.title !== nextProps.title) {
       this.title = nextProps.title;
