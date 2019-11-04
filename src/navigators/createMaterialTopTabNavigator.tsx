@@ -56,7 +56,7 @@ class MaterialTabView extends React.Component<Props> {
   componentDidMount = () => {
     setTimeout(() => {
       this.title = ''
-    }, 200)
+    }, 3000)
   };
   
 
